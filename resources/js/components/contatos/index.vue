@@ -1,0 +1,3 @@
+<template>
+    <h1>Lista de contatos</h1>
+</template>
