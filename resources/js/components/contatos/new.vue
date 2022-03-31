@@ -20,11 +20,11 @@
       <div class="products__create__cardWrapper mt-2">
         <div class="products__create__main">
           <div class="products__create__main--addInfo card py-2 px-2 bg-white">
-            <p class="mb-1">Name</p>
+            <p class="mb-1">Nome</p>
             <input type="text" class="input" />
 
-            <p class="my-1">Description (optional)</p>
-            <textarea cols="10" rows="5" class="textarea"></textarea>
+            <p class="my-1">E-mail</p>
+            <input type="text" class="input" />
 
             <div class="products__create__main--media--images mt-2">
               <ul
@@ -70,28 +70,20 @@
             </div>
           </div>
         </div>
+        
         <div class="products__create__sidebar">
-          <!-- Product Organization -->
           <div class="card py-2 px-2 bg-white">
-            <!-- Product unit -->
             <div class="my-3">
-              <p>Product type</p>
+              <p>Senha</p>
               <input type="text" class="input" />
             </div>
             <hr />
 
-            <!-- Product invrntory -->
             <div class="my-3">
-              <p>Inventory</p>
+              <p>Telefone</p>
               <input type="text" class="input" />
             </div>
             <hr />
-
-            <!-- Product Price -->
-            <div class="my-3">
-              <p>Price</p>
-              <input type="text" class="input" />
-            </div>
           </div>
         </div>
       </div>
