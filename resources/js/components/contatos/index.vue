@@ -1,3 +1,72 @@
+<script setup>
+  import { onMounted, ref } from "vue";
+
+  let contatos = ref([]);
+
+  onMounted(async () => {
+    getContatos();
+  });
+
+  const getContatos = async () => {
+    let response = await axios.get("/api/get_all_contato")
+    contataos.value = response.data.contatos;
+    console.log('contatos', response);
+  }
+</script>
+
 <template>
-    <h1>Lista de contatos</h1>
+  <div class="container">
+    <div class="products__list table my-3">
+      <div
+        class="
+          customers__titlebar
+          dflex
+          justify-content-between
+          align-items-center
+        "
+      >
+        <div class="customers__titlebar--item">
+          <h1 class="my-1">Products</h1>
+        </div>
+        <div class="customers__titlebar--item">
+          <button class="btn btn-secondary my-1">Add Product</button>
+        </div>
+      </div>
+
+      <div
+        class="table--heading mt-2 products__list__heading"
+        style="padding-top: 20px; background: #fff"
+      >
+        <!-- <p class="table--heading--col1">&#32;</p> -->
+        <p class="table--heading--col1">Imagem</p>
+        <p class="table--heading--col2">Nome</p>
+        <p class="table--heading--col4">E-mail</p>
+        <p class="table--heading--col3">Senha</p>
+        <!-- <p class="table--heading--col5">&#32;</p> -->
+        <p class="table--heading--col5">Ações</p>
+      </div>
+
+      <!-- product 1 -->
+      <div class="table--items products__list__item">
+        <div class="products__list__item--imgWrapper">
+          <img
+            class="products__list__item--img"
+            src="1.jpg"
+            style="height: 40px"
+          />
+        </div>
+        <a href="# " class="table--items--col2"> Product name </a>
+        <p class="table--items--col2">type</p>
+        <p class="table--items--col3">10</p>
+        <div>
+          <button class="btn-icon btn-icon-success">
+            <i class="fas fa-pencil-alt"></i>
+          </button>
+          <button class="btn-icon btn-icon-danger">
+            <i class="far fa-trash-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
