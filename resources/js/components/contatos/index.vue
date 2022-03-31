@@ -1,5 +1,8 @@
 <script setup>
   import { onMounted, ref } from "vue";
+  import { useRouter } from "vue-router"
+
+  const router = useRouter();
 
   let contatos = ref([]);
 
@@ -7,10 +10,17 @@
     getContatos();
   });
 
+  const newContato = () => {
+    router.push('/contato/new')
+  }
+
   const getContatos = async () => {
     let response = await axios.get("/api/get_all_contato")
-    contataos.value = response.data.contatos;
-    console.log('contatos', response);
+    contatos.value = response.data.contatos;
+  }
+
+  const ourImage = (img) => {
+    return "/upload/"+img;
   }
 </script>
 
@@ -29,7 +39,7 @@
           <h1 class="my-1">Products</h1>
         </div>
         <div class="customers__titlebar--item">
-          <button class="btn btn-secondary my-1">Add Product</button>
+          <button class="btn btn-secondary my-1" @click="newContato">Add Product</button>
         </div>
       </div>
 
@@ -47,17 +57,17 @@
       </div>
 
       <!-- product 1 -->
-      <div class="table--items products__list__item">
+      <div class="table--items products__list__item" v-for="item in contatos" :key="item.id"  v-if="contatos.length > 0">
         <div class="products__list__item--imgWrapper">
           <img
             class="products__list__item--img"
-            src="1.jpg"
-            style="height: 40px"
+            :src="ourImage(item.photo)"
+            style="height: 40px" v-if="item.photo"
           />
         </div>
-        <a href="# " class="table--items--col2"> Product name </a>
-        <p class="table--items--col2">type</p>
-        <p class="table--items--col3">10</p>
+        <p class="table--items--col2"> {{item.name}} </p>
+        <p class="table--items--col2">{{item.e-mail}}</p>
+        <p class="table--items--col3">{{item.password}}</p>
         <div>
           <button class="btn-icon btn-icon-success">
             <i class="fas fa-pencil-alt"></i>
@@ -67,6 +77,10 @@
           </button>
         </div>
       </div>
+      <div class="table--items products__list__item" v-else>
+        <p>Não encontrado</p>
+      </div>
+
     </div>
   </div>
 </template>
