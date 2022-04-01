@@ -35,7 +35,7 @@ main h1~p {
 
 .container {
     width: 100%;
-    max-width: 780px;
+    max-width: 880px;
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
@@ -79,12 +79,11 @@ main h1~p {
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 1.2rem;
     background-color: #f1f1f1;
-
 }
 
 .products__list__heading {
     -ms-grid-columns: 80px 1fr 140px 120px 100px;
-    grid-template-columns: 50px 1fr 120px 120px 120px;
+    grid-template-columns: 50px 1fr 1fr 120px 120px;
 }
 
 
@@ -107,7 +106,7 @@ main h1~p {
 .products__list__item {
     border-bottom: 1px solid #e0e0e0;
     -ms-grid-columns: 80px 1fr 140px 120px 100px;
-    grid-template-columns: 50px 1fr 120px 120px 120px;
+    grid-template-columns: 50px 1fr 1fr 120px 120px;
 }
 
 .card {

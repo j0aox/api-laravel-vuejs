@@ -19675,7 +19675,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     })));
 
     var newContato = function newContato() {
-      router.push('/contato/new');
+      router.push("/contato/new");
     };
 
     var getContatos = /*#__PURE__*/function () {
@@ -19756,7 +19756,7 @@ __webpack_require__.r(__webpack_exports__);
     });
     var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
 
-    var getPhoto = function getPhoto() {
+    var getImg = function getImg() {
       var photo = "/upload/image.png";
 
       if (form.value.photo) {
@@ -19775,11 +19775,11 @@ __webpack_require__.r(__webpack_exports__);
       var reader = new FileReader();
       var limit = 1024 * 1024 * 2;
 
-      if (file['size'] > limit) {
-        form.value.photo = reader.result;
+      if (file["size"] > limit) {
+        return false;
       }
 
-      reader.onloadend = function (file) {
+      reader.onload = function (file) {
         form.value.photo = reader.result;
       };
 
@@ -19788,16 +19788,16 @@ __webpack_require__.r(__webpack_exports__);
 
     var saveContato = function saveContato() {
       var formData = new FormData();
-      formData.append('name', form.value.name);
-      formData.append('email', form.value.email);
-      formData.append('password', form.value.password);
-      formData.append('photo', form.value.photo);
-      axios.post("/api/add_contato/", formData).then(function (res) {
-        form.value.name = '';
-        form.value.email = '';
-        form.value.password = '';
-        form.value.photo = '';
-        router.push('/');
+      formData.append("name", form.value.name);
+      formData.append("email", form.value.email);
+      formData.append("password", form.value.password);
+      formData.append("photo", form.value.photo);
+      axios.post("/api/add_contato/", formData).then(function (response) {
+        form.value.name = "";
+        form.value.email = "";
+        form.value.password = "";
+        form.value.photo = "";
+        router.push("/");
         toast.fire({
           icon: "success",
           title: "Contato Salvo"
@@ -19808,7 +19808,7 @@ __webpack_require__.r(__webpack_exports__);
     var __returned__ = {
       form: form,
       router: router,
-      getPhoto: getPhoto,
+      getImg: getImg,
       updatePhoto: updatePhoto,
       saveContato: saveContato,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
@@ -19869,7 +19869,7 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "customers__titlebar--item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "my-1"
-}, "Products")], -1
+}, "Contatos")], -1
 /* HOISTED */
 );
 
@@ -19919,7 +19919,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn btn-secondary my-1",
     onClick: $setup.newContato
-  }, "Adicionar")])]), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" product 1 "), $setup.contatos.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+  }, " Adicionar ")])]), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" product 1 "), $setup.contatos.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     key: 0
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.contatos, function (item) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
@@ -19975,7 +19975,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
   "class": "products__create__titlebar--item"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
   "class": "my-1"
-}, "Add Product")], -1
+}, "Adicionar Contato")], -1
 /* HOISTED */
 );
 
@@ -20033,7 +20033,7 @@ var _hoisted_18 = {
 var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
   "class": "products__create__main--media--images--item--form--label",
   "for": "myfile"
-}, "Add Image", -1
+}, "Adicionar Imagem", -1
 /* HOISTED */
 );
 
@@ -20043,7 +20043,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.saveContato();
     })
-  }, "Save")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  }, " Salvar ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
     "class": "input",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
@@ -20069,7 +20069,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.password]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     "class": "products__create__main--media--images--item--img",
-    src: $setup.getPhoto(),
+    src: $setup.getImg(),
     alt: ""
   }, null, 8
   /* PROPS */
