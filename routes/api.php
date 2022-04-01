@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("/get_all_contato", [ContatoController::class, 'get_all_contato']);
+Route::post("/add_contato", [ContatoController::class, 'add_contato']);

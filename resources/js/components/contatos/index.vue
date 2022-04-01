@@ -39,7 +39,7 @@
           <h1 class="my-1">Products</h1>
         </div>
         <div class="customers__titlebar--item">
-          <button class="btn btn-secondary my-1" @click="newContato">Add Product</button>
+          <button class="btn btn-secondary my-1" @click="newContato">Adicionar</button>
         </div>
       </div>
 
@@ -66,7 +66,7 @@
           />
         </div>
         <p class="table--items--col2"> {{item.name}} </p>
-        <p class="table--items--col2">{{item.e-mail}}</p>
+        <p class="table--items--col2">{{item.email}}</p>
         <p class="table--items--col3">{{item.password}}</p>
         <div>
           <button class="btn-icon btn-icon-success">

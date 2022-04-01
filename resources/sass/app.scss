@@ -187,6 +187,10 @@ main h1~p {
     grid-template-columns: 1fr minmax(auto, 290px);
     grid-gap: 20px;
     color: #6a727a;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card {
