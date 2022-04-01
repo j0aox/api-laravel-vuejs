@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import contatoIndex from "../components/contatos/index.vue";
 import contatoNew from "../components/contatos/new.vue";
+import contatoEdit from "../components/contatos/edit.vue";
 
 import notFound from "../components/notFound.vue";
 
@@ -13,6 +14,11 @@ const routes = [
     {
         path: '/contato/new',
         component: contatoNew
+    },
+    {
+        path: '/contato/edit/:id',
+        component: contatoEdit,
+        props: true
     },
     {
         path: '/:pathMatch(.*)*',

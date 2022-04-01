@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('contatos', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('email')->nullable();
+            $table->string('email')->nullable()->unique();
             $table->string('password')->nullable();
             $table->string('photo')->nullable();
             $table->timestamps();
