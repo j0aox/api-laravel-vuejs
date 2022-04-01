@@ -82,6 +82,10 @@ const updateContato = () => {
         })
         .catch((error) => {});
 };
+
+const backHome = () => {
+    router.push('/');
+}
 </script>
 
 <template>
@@ -165,12 +169,12 @@ const updateContato = () => {
                 </div>
             </div>
             <!-- Footer Bar -->
-            <!-- 
+            
             <div class="dflex justify-content-between align-items-center my-3">
                 <p></p>
-                <button class="btn btn-secondary">Save</button>
+                <button class="btn btn-secondary" @click="backHome">Voltar</button>
             </div>
-            -->
+            
         </div>
     </div>
 </template>

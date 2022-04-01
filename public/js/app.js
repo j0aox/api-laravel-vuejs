@@ -19764,6 +19764,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       })["catch"](function (error) {});
     };
 
+    var backHome = function backHome() {
+      router.push('/');
+    };
+
     var __returned__ = {
       form: form,
       router: router,
@@ -19772,6 +19776,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       updatePhoto: updatePhoto,
       getSingleContato: getSingleContato,
       updateContato: updateContato,
+      backHome: backHome,
       onMounted: vue__WEBPACK_IMPORTED_MODULE_1__.onMounted,
       ref: vue__WEBPACK_IMPORTED_MODULE_1__.ref,
       useRouter: vue_router__WEBPACK_IMPORTED_MODULE_2__.useRouter
@@ -19989,13 +19994,13 @@ __webpack_require__.r(__webpack_exports__);
         toast.fire({
           title: "O E-mail já existe",
           text: "Tente outro e-mail",
-          icon: "warning" //showCancelButton: true,
-          //confirmButtonColor: "#3085d6",
-          //cancelButtonText: "Cancelar",
-          //confirmButtonText: "Deletar",
-
+          icon: "warning"
         });
       });
+    };
+
+    var backHome = function backHome() {
+      router.push("/");
     };
 
     var __returned__ = {
@@ -20004,6 +20009,7 @@ __webpack_require__.r(__webpack_exports__);
       getPhoto: getPhoto,
       updatePhoto: updatePhoto,
       saveContato: saveContato,
+      backHome: backHome,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
       useRouter: vue_router__WEBPACK_IMPORTED_MODULE_1__.useRouter
     };
@@ -20127,6 +20133,10 @@ var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn btn-secondary ml-1",
@@ -20170,7 +20180,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onChange: $setup.updatePhoto
   }, null, 32
   /* HYDRATE_EVENTS */
-  )])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer Bar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" \r\n            <div class=\"dflex justify-content-between align-items-center my-3\">\r\n                <p></p>\r\n                <button class=\"btn btn-secondary\">Save</button>\r\n            </div>\r\n            ")])]);
+  )])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer Bar "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "dflex justify-content-between align-items-center my-3"
+  }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn btn-secondary",
+    onClick: $setup.backHome
+  }, "Voltar")])])]);
 }
 
 /***/ }),
@@ -20386,6 +20401,10 @@ var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, null, -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": "btn btn-secondary ml-1",
@@ -20429,7 +20448,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onChange: $setup.updatePhoto
   }, null, 32
   /* HYDRATE_EVENTS */
-  )])])])])])])])])]);
+  )])])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "dflex justify-content-between align-items-center my-3"
+  }, [_hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn btn-secondary",
+    onClick: $setup.backHome
+  }, "Voltar")])])]);
 }
 
 /***/ }),

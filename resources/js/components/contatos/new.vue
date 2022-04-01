@@ -68,12 +68,12 @@ const saveContato = () => {
         title: "O E-mail já existe",
         text: "Tente outro e-mail",
         icon: "warning",
-        //showCancelButton: true,
-        //confirmButtonColor: "#3085d6",
-        //cancelButtonText: "Cancelar",
-        //confirmButtonText: "Deletar",
       });
     });
+};
+
+const backHome = () => {
+  router.push("/");
 };
 </script>
 
@@ -156,6 +156,11 @@ const saveContato = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="dflex justify-content-between align-items-center my-3">
+        <p></p>
+        <button class="btn btn-secondary" @click="backHome">Voltar</button>
       </div>
     </div>
   </div>
