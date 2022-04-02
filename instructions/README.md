@@ -1,6 +1,6 @@
 ## Sobre
 
-Este é um projeto simples feito em PHP + Laravel, Vue.js e MySQL
+Este é um projeto simples feito em PHP + Laravel, Vue.js e MySQL.
 Uma API de cadastro de usuário com os campos de: nome, e-mail, senha, foto
 Com o front-end feito com Vue.js
 
