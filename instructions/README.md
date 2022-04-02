@@ -44,6 +44,6 @@ Startar o projeto
 -- php artisan serve
 
 ```
-## Executando 
+## Executando o projeto
 
 Depois de feito tudo isso, abra o navegador e acesse (http://localhost:8000)
